@@ -32,3 +32,28 @@ books = {
     home: { country: "+1", area: "211", number: "652-4515" }
 };
 console.log(books.home.country);
+//array
+var fileExtensions = ["js", "ts"];
+var cars = [
+    {
+        make: "Toyota",
+        model: "Corolla",
+        year: 2002
+    },
+    {
+        make: "Honda",
+        model: "Accord",
+        year: 2017
+    }
+];
+//tuples
+var myCarTuple = [
+    2002,
+    "Toyota",
+    "Corolla"
+];
+myCarTuple = [2002, "Accord", "Sedan"];
+console.log(myCarTuple);
+//problem in tuple tr as array
+myCarTuple.push("Abcd");
+console.log(myCarTuple);

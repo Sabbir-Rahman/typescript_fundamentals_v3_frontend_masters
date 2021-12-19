@@ -61,3 +61,34 @@ books= {
 
 
 console.log(books.home.country)
+
+//array
+const fileExtensions = ["js", "ts"]
+
+const cars = [
+    {
+        make: "Toyota",
+        model: "Corolla",
+        year: 2002,
+    },
+    {
+        make: "Honda",
+        model: "Accord",
+        year: 2017
+    }
+]
+
+//tuples
+let myCarTuple : [number, string, string] = [
+    2002,
+    "Toyota",
+    "Corolla"
+]
+
+myCarTuple = [2002,"Accord","Sedan"]
+
+console.log(myCarTuple)
+
+//problem in tuple tr as array
+myCarTuple.push("Abcd")
+console.log(myCarTuple)
