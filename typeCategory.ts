@@ -92,3 +92,7 @@ console.log(myCarTuple)
 //problem in tuple tr as array
 myCarTuple.push("Abcd")
 console.log(myCarTuple)
+
+//Structural and non structural
+//Strong -> Static -> Compile time c,c++, ts
+//Weak -> Dynamic -> python, javascript
