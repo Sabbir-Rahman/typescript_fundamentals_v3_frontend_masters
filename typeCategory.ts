@@ -96,3 +96,35 @@ console.log(myCarTuple)
 //Structural and non structural
 //Strong -> Static -> Compile time c,c++, ts
 //Weak -> Dynamic -> python, javascript
+
+
+//union types
+function flipCoin(): "heads"|"tails" {
+    if (Math.random() >0.5) return "heads"
+    return "tails"
+}
+
+//union types with tuples
+function maybeGetUserInfo():
+    | ["error",Error]
+    | ["success", { name: string; email: string}]{
+        if (flipCoin() === "heads"){
+            return [
+                "success",
+                { name: "Mike North", email:"mike@example.com"}
+            ]
+        } else {
+            return [
+                "error",
+                new Error(" The coin landed on tails :(")
+            ]
+        }
+    }
+
+const outcome = maybeGetUserInfo()
+if (outcome[0] === "error"){
+    outcome
+} else {
+    outcome
+}
+

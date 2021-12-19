@@ -57,3 +57,28 @@ console.log(myCarTuple);
 //problem in tuple tr as array
 myCarTuple.push("Abcd");
 console.log(myCarTuple);
+//Structural and non structural
+//Strong -> Static -> Compile time c,c++, ts
+//Weak -> Dynamic -> python, javascript
+//union types
+function flipCoin() {
+    if (Math.random() > 0.5)
+        return "heads";
+    return "tails";
+}
+//union types with tuples
+function maybeGetUserInfo() {
+    if (flipCoin() === "heads") {
+        return [
+            "success",
+            { name: "Mike North", email: "mike@example.com" }
+        ];
+    }
+    else {
+        return [
+            "error",
+            new Error(" The coin landed on tails :(")
+        ];
+    }
+}
+// const outcome = maybeGetUserInfo()
