@@ -37,3 +37,27 @@ function printCar(
 
 printCar({make:"Honda",model:"Acccord",year:2017})
 printCar(mytesla)
+
+//dictionary 
+
+const phones = {
+    home: { country:"+1",area:"211",number:"652-4515"},
+    work: { country:"+1", area:"670", number:"752-5856"},
+    fax: { country: "+1", area: "322", number:"752-5856"}
+}
+
+let books: {
+    [k:string]:{
+        country:string,
+        area :string,
+        number: string
+    } // add |undefined here to check books.something is present or not
+} 
+
+books= {
+    home: { country:"+1",area:"211",number:"652-4515"}
+}
+
+
+
+console.log(books.home.country)
