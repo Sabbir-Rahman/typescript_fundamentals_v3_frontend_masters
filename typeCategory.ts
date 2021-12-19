@@ -128,3 +128,17 @@ if (outcome[0] === "error"){
     outcome
 }
 
+//intersection
+function makeWeek(): Date & { end: Date} {
+
+    const ONE_WEEK = 7
+    const start = new Date()
+    const end = new Date(start.valueOf() + ONE_WEEK)
+
+    return { ...start, end}
+}
+
+const thisWeek = makeWeek()
+
+thisWeek.toISOString()
+thisWeek.end.toISOString()
